@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Créer un compte — Mini-Projet JavaScript</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="auth-card" style="max-width: 520px;">
+      <p class="auth-eyebrow">Rejoignez-nous</p>
+      <h1 class="auth-title">Créer un compte</h1>
+
+      <form id="create-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" required />
+          </div>
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="pseudo">Pseudo</label>
+            <input type="text" id="pseudo" required />
+          </div>
+          <div class="field">
+            <label for="age">Âge</label>
+            <input type="number" id="age" min="1" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="couleur">Couleur préférée</label>
+            <select id="couleur" required>
+              <option value="">-- choisir --</option>
+              <option value="maroon">maroon</option>
+              <option value="navy">navy</option>
+              <option value="teal">teal</option>
+              <option value="olive">olive</option>
+              <option value="purple">purple</option>
+              <option value="coral">coral</option>
+              <option value="black">black</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="pays">Pays</label>
+            <input type="text" id="pays" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="devise">Devise</label>
+            <input type="text" id="devise" placeholder="ex: MAD, EUR" required />
+          </div>
+          <div class="field">
+            <label for="admin">Type de compte</label>
+            <select id="admin" required>
+              <option value="false">Visiteur</option>
+              <option value="true">Admin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="avatar">URL avatar</label>
+          <input type="url" id="avatar" required />
+        </div>
+
+        <div class="field">
+          <label for="photo">URL photo</label>
+          <input type="url" id="photo" required />
+        </div>
+
+        <div class="field">
+          <label for="motdepasse">Mot de passe</label>
+          <input type="password" id="motdepasse" required />
+        </div>
+        <p class="hint">
+          Min. 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.
+        </p>
+
+        <div class="field">
+          <label for="confirmation">Confirmer le mot de passe</label>
+          <input type="password" id="confirmation" required />
+        </div>
+
+        <button type="submit" class="btn-primary" id="create-btn">Créer le compte</button>
+
+        <ul class="error-list" id="error-list"></ul>
+      </form>
+
+      <p class="auth-footer">
+        Déjà inscrit ? <a href="login.html">Se connecter</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/createAccount.js"></script>
+</body>
+</html>

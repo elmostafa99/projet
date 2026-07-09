@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Connexion — Mini-Projet JavaScript</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="auth-card">
+      <p class="auth-eyebrow">Bienvenue</p>
+      <h1 class="auth-title">Connexion</h1>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Nom d'utilisateur</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="remember" />
+          <label for="remember" style="margin:0;">Se rappeler de moi</label>
+        </div>
+
+        <button type="submit" class="btn-primary" id="login-btn">LOGIN</button>
+
+        <ul class="error-list" id="error-list"></ul>
+      </form>
+
+      <p class="auth-footer">
+        Pas encore inscrit ? <a href="createAccount.html">Create an account</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

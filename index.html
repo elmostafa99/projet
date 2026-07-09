@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Mini-Projet JavaScript</title>
+<script src="js/storage.js"></script>
+<script>
+  // Redirige vers l'espace applicatif si une session existe, sinon vers le login
+  if (Storage.isLoggedIn()) {
+    window.location.replace("layout.html");
+  } else {
+    window.location.replace("login.html");
+  }
+</script>
+</head>
+<body>
+  <p>Redirection…</p>
+</body>
+</html>
